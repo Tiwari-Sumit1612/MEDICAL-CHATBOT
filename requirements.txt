@@ -1,5 +1,12 @@
-ctransformers==0.2.5
-sentence-transformer==2.2.2
-pinecone-client
-langchain==0.0.225
-flask
+flask>=3.1.0
+
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-huggingface>=0.1.0
+
+sentence-transformers>=3.0.0
+
+pinecone>=7.0.0
+
+pypdf>=5.0.0
+python-dotenv>=1.0.0
