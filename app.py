@@ -44,7 +44,7 @@ embeddings = PineconeEmbeddings(
 # Pinecone Vector Store
 # =====================================================
 
-index_name = "medical-chatbot"
+index_name = "medical-chatbot-v2"
 
 docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,
