@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 
-from src.helper import download_hugging_face_embeddings
 from src.prompt import *
-
+from langchain_pinecone import PineconeEmbeddings
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_pinecone import PineconeVectorStore
@@ -37,7 +36,9 @@ app = Flask(__name__)
 # Embeddings
 # =====================================================
 
-embeddings = download_hugging_face_embeddings()
+embeddings = PineconeEmbeddings(
+    model="multilingual-e5-large"
+)
 
 # =====================================================
 # Pinecone Vector Store
